@@ -22,7 +22,6 @@ def dice(_x, axis=-1, epsilon=0.000000001, name=''):
   # x_normed = tf.layers.batch_normalization(_x, center=False, scale=False)
   x_p = tf.sigmoid(x_normed)
 
-
   return alphas * (1.0 - x_p) * _x + x_p * _x
 
 def parametric_relu(_x):
